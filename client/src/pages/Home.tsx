@@ -306,12 +306,36 @@ function HeroSection() {
               color: "oklch(0.97 0.01 90)",
               padding: "1.1rem 2.8rem",
               textDecoration: "none",
-              display: "inline-block",
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "0.5rem",
               transition: "all 0.3s ease",
               fontWeight: 600,
             }}
           >
+            <Phone size={18} />
             Rezervo Tavolë
+          </a>
+          <a
+            href="tel:+355692123456"
+            style={{
+              fontFamily: "'Cinzel', serif",
+              fontSize: "1rem",
+              letterSpacing: "0.15em",
+              textTransform: "uppercase",
+              background: "linear-gradient(135deg, oklch(0.52 0.18 15), oklch(0.45 0.16 12))",
+              color: "oklch(0.97 0.01 90)",
+              padding: "1.1rem 2.8rem",
+              textDecoration: "none",
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "0.5rem",
+              transition: "all 0.3s ease",
+              fontWeight: 600,
+            }}
+          >
+            <Phone size={18} />
+            Na Telefononi
           </a>
           <a
             href="#menu"
