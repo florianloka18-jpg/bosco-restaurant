@@ -1,8 +1,8 @@
 /*
- * BOSCO RESTAURANT — HOME PAGE
- * Design: Dark Luxury / Cinematic Fine Dining
+ * BOSCO RESTAURANT — HOME PAGE (ALBANIAN)
+ * Design: Bright Elegant Fine Dining
  * Sections: Navbar, Hero, About, Menu Highlights, Gallery, Reviews, Reservations, Contact, Footer
- * Colors: Deep espresso bg, burnished gold accents, warm cream text
+ * Colors: Cream bg, deep burgundy accents, warm brown text
  * Fonts: Playfair Display (headings), Lato (body), Cinzel (labels/accents)
  */
 
@@ -40,17 +40,17 @@ function useInView(threshold = 0.15) {
 
 // ─── Components ───────────────────────────────────────────────────────────────
 
-function GoldDivider({ className = "" }: { className?: string }) {
+function BurgundyDivider({ className = "" }: { className?: string }) {
   return (
-    <div className={`h-px w-full ${className}`} style={{
-      background: "linear-gradient(90deg, transparent, oklch(0.76 0.16 75), transparent)"
+    <div className={`h-0.5 w-full ${className}`} style={{
+      background: "linear-gradient(90deg, transparent, oklch(0.52 0.18 15), transparent)"
     }} />
   );
 }
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
-    <p className="cinzel text-xs tracking-widest mb-4" style={{ color: "oklch(0.76 0.16 75)", fontFamily: "'Cinzel', serif", letterSpacing: "0.2em", textTransform: "uppercase" }}>
+    <p className="cinzel text-xs tracking-widest mb-4" style={{ color: "oklch(0.52 0.18 15)", fontFamily: "'Cinzel', serif", letterSpacing: "0.2em", textTransform: "uppercase" }}>
       {children}
     </p>
   );
@@ -68,20 +68,20 @@ function Navbar() {
   }, []);
 
   const navLinks = [
-    { label: "About", href: "#about" },
+    { label: "Rreth Nesh", href: "#about" },
     { label: "Menu", href: "#menu" },
-    { label: "Gallery", href: "#gallery" },
-    { label: "Reviews", href: "#reviews" },
-    { label: "Contact", href: "#contact" },
+    { label: "Galeria", href: "#gallery" },
+    { label: "Komente", href: "#reviews" },
+    { label: "Kontakti", href: "#contact" },
   ];
 
   return (
     <nav
       className="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
       style={{
-        background: scrolled ? "oklch(0.14 0.015 45 / 96%)" : "transparent",
+        background: scrolled ? "oklch(0.97 0.01 90 / 96%)" : "transparent",
         backdropFilter: scrolled ? "blur(12px)" : "none",
-        borderBottom: scrolled ? "1px solid oklch(1 0 0 / 8%)" : "none",
+        borderBottom: scrolled ? "1px solid oklch(0.52 0.18 15 / 15%)" : "none",
       }}
     >
       <div className="container flex items-center justify-between py-4">
@@ -91,7 +91,7 @@ function Navbar() {
             fontFamily: "'Cinzel', serif",
             fontSize: "1.4rem",
             fontWeight: 600,
-            color: "oklch(0.76 0.16 75)",
+            color: "oklch(0.52 0.18 15)",
             letterSpacing: "0.18em",
             lineHeight: 1,
           }}>BOSCO</span>
@@ -99,10 +99,10 @@ function Navbar() {
             fontFamily: "'Lato', sans-serif",
             fontSize: "0.6rem",
             letterSpacing: "0.3em",
-            color: "oklch(0.65 0.020 75)",
+            color: "oklch(0.55 0.06 40)",
             textTransform: "uppercase",
             marginTop: "2px",
-          }}>RESTAURANT</span>
+          }}>RESTORANT</span>
         </a>
 
         {/* Desktop Nav */}
@@ -116,12 +116,12 @@ function Navbar() {
                   fontSize: "0.7rem",
                   letterSpacing: "0.15em",
                   textTransform: "uppercase",
-                  color: "oklch(0.80 0.015 85)",
+                  color: "oklch(0.35 0.08 40)",
                   textDecoration: "none",
                   transition: "color 0.3s",
                 }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = "oklch(0.76 0.16 75)")}
-                onMouseLeave={(e) => (e.currentTarget.style.color = "oklch(0.80 0.015 85)")}
+                onMouseEnter={(e) => (e.currentTarget.style.color = "oklch(0.52 0.18 15)")}
+                onMouseLeave={(e) => (e.currentTarget.style.color = "oklch(0.35 0.08 40)")}
               >
                 {link.label}
               </a>
@@ -134,21 +134,21 @@ function Navbar() {
           href="https://seatme.al"
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden md:block btn-gold"
+          className="hidden md:block btn-burgundy"
           style={{
             fontFamily: "'Cinzel', serif",
             fontSize: "0.65rem",
             letterSpacing: "0.15em",
             textTransform: "uppercase",
-            background: "linear-gradient(135deg, oklch(0.76 0.16 75), oklch(0.68 0.14 68))",
-            color: "oklch(0.14 0.015 45)",
+            background: "linear-gradient(135deg, oklch(0.52 0.18 15), oklch(0.45 0.16 12))",
+            color: "oklch(0.97 0.01 90)",
             padding: "0.6rem 1.4rem",
             textDecoration: "none",
             transition: "all 0.3s ease",
             display: "inline-block",
           }}
           onMouseEnter={(e) => {
-            (e.currentTarget as HTMLElement).style.boxShadow = "0 0 20px oklch(0.76 0.16 75 / 35%)";
+            (e.currentTarget as HTMLElement).style.boxShadow = "0 0 20px oklch(0.52 0.18 15 / 30%)";
             (e.currentTarget as HTMLElement).style.transform = "translateY(-1px)";
           }}
           onMouseLeave={(e) => {
@@ -156,14 +156,14 @@ function Navbar() {
             (e.currentTarget as HTMLElement).style.transform = "translateY(0)";
           }}
         >
-          Reserve a Table
+          Rezervo Tavolë
         </a>
 
         {/* Mobile Menu Toggle */}
         <button
           className="md:hidden"
           onClick={() => setMenuOpen(!menuOpen)}
-          style={{ color: "oklch(0.76 0.16 75)", background: "none", border: "none" }}
+          style={{ color: "oklch(0.52 0.18 15)", background: "none", border: "none" }}
         >
           {menuOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
@@ -172,9 +172,9 @@ function Navbar() {
       {/* Mobile Menu */}
       {menuOpen && (
         <div style={{
-          background: "oklch(0.14 0.015 45 / 98%)",
+          background: "oklch(0.97 0.01 90 / 98%)",
           backdropFilter: "blur(16px)",
-          borderTop: "1px solid oklch(1 0 0 / 8%)",
+          borderTop: "1px solid oklch(0.52 0.18 15 / 15%)",
           padding: "1.5rem",
         }}>
           <ul className="flex flex-col gap-5">
@@ -188,7 +188,7 @@ function Navbar() {
                     fontSize: "0.8rem",
                     letterSpacing: "0.15em",
                     textTransform: "uppercase",
-                    color: "oklch(0.80 0.015 85)",
+                    color: "oklch(0.35 0.08 40)",
                     textDecoration: "none",
                   }}
                 >
@@ -206,14 +206,14 @@ function Navbar() {
                   fontSize: "0.7rem",
                   letterSpacing: "0.15em",
                   textTransform: "uppercase",
-                  background: "linear-gradient(135deg, oklch(0.76 0.16 75), oklch(0.68 0.14 68))",
-                  color: "oklch(0.14 0.015 45)",
+                  background: "linear-gradient(135deg, oklch(0.52 0.18 15), oklch(0.45 0.16 12))",
+                  color: "oklch(0.97 0.01 90)",
                   padding: "0.7rem 1.5rem",
                   textDecoration: "none",
                   display: "inline-block",
                 }}
               >
-                Reserve a Table
+                Rezervo Tavolë
               </a>
             </li>
           </ul>
@@ -233,22 +233,22 @@ function HeroSection() {
           src={HERO_IMG}
           alt="Bosco Restaurant interior"
           className="w-full h-full object-cover"
-          style={{ filter: "brightness(0.55)" }}
+          style={{ filter: "brightness(0.75) contrast(1.1)" }}
         />
         {/* Vignette overlay */}
         <div className="absolute inset-0" style={{
-          background: "radial-gradient(ellipse at center, transparent 30%, oklch(0.14 0.015 45 / 70%) 100%)"
+          background: "radial-gradient(ellipse at center, transparent 30%, oklch(0.97 0.01 90 / 50%) 100%)"
         }} />
         {/* Bottom gradient */}
         <div className="absolute bottom-0 left-0 right-0 h-48" style={{
-          background: "linear-gradient(to top, oklch(0.14 0.015 45), transparent)"
+          background: "linear-gradient(to top, oklch(0.97 0.01 90), transparent)"
         }} />
       </div>
 
       {/* Content */}
       <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
         <p className="cinzel text-xs tracking-widest mb-6 animate-fade-in" style={{
-          color: "oklch(0.76 0.16 75)",
+          color: "oklch(0.52 0.18 15)",
           fontFamily: "'Cinzel', serif",
           letterSpacing: "0.3em",
           textTransform: "uppercase",
@@ -256,14 +256,14 @@ function HeroSection() {
           opacity: 0,
           animationFillMode: "forwards",
         }}>
-          Fine Dining · Tirana, Albania
+          Restorant i Imët · Tiranë, Shqipëri
         </p>
 
         <h1 className="animate-letter-expand" style={{
           fontFamily: "'Playfair Display', serif",
           fontSize: "clamp(3.5rem, 10vw, 7rem)",
           fontWeight: 400,
-          color: "oklch(0.93 0.015 85)",
+          color: "oklch(0.35 0.08 40)",
           lineHeight: 1.05,
           letterSpacing: "0.02em",
           marginBottom: "1.5rem",
@@ -278,13 +278,13 @@ function HeroSection() {
           fontFamily: "'Playfair Display', serif",
           fontStyle: "italic",
           fontSize: "clamp(1rem, 2.5vw, 1.4rem)",
-          color: "oklch(0.76 0.16 75)",
+          color: "oklch(0.52 0.18 15)",
           marginBottom: "2.5rem",
           opacity: 0,
           animationDelay: "0.8s",
           animationFillMode: "forwards",
         }}>
-          Eat, enjoy, repeat.
+          Hani, shijoni, përsëritni.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up" style={{
@@ -301,15 +301,15 @@ function HeroSection() {
               fontSize: "0.7rem",
               letterSpacing: "0.15em",
               textTransform: "uppercase",
-              background: "linear-gradient(135deg, oklch(0.76 0.16 75), oklch(0.68 0.14 68))",
-              color: "oklch(0.14 0.015 45)",
+              background: "linear-gradient(135deg, oklch(0.52 0.18 15), oklch(0.45 0.16 12))",
+              color: "oklch(0.97 0.01 90)",
               padding: "0.85rem 2.2rem",
               textDecoration: "none",
               display: "inline-block",
               transition: "all 0.3s ease",
             }}
           >
-            Reserve a Table
+            Rezervo Tavolë
           </a>
           <a
             href="#menu"
@@ -319,15 +319,15 @@ function HeroSection() {
               letterSpacing: "0.15em",
               textTransform: "uppercase",
               background: "transparent",
-              color: "oklch(0.76 0.16 75)",
+              color: "oklch(0.52 0.18 15)",
               padding: "0.85rem 2.2rem",
               textDecoration: "none",
               display: "inline-block",
-              border: "1px solid oklch(0.76 0.16 75 / 60%)",
+              border: "2px solid oklch(0.52 0.18 15)",
               transition: "all 0.3s ease",
             }}
           >
-            Explore Menu
+            Shfletoni Menynë
           </a>
         </div>
 
@@ -339,16 +339,16 @@ function HeroSection() {
         }}>
           <div className="flex gap-0.5">
             {[1,2,3,4,5].map(i => (
-              <Star key={i} size={12} fill={i <= 4 ? "oklch(0.76 0.16 75)" : "none"} color="oklch(0.76 0.16 75)" />
+              <Star key={i} size={12} fill={i <= 4 ? "oklch(0.52 0.18 15)" : "none"} color="oklch(0.52 0.18 15)" />
             ))}
           </div>
-          <span style={{ fontFamily: "'Lato', sans-serif", fontSize: "0.75rem", color: "oklch(0.65 0.020 75)", letterSpacing: "0.05em" }}>
-            4.7 · 216 Google Reviews
+          <span style={{ fontFamily: "'Lato', sans-serif", fontSize: "0.75rem", color: "oklch(0.55 0.06 40)", letterSpacing: "0.05em" }}>
+            4.7 · 216 Komente në Google
           </span>
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce" style={{ color: "oklch(0.76 0.16 75 / 60%)" }}>
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce" style={{ color: "oklch(0.52 0.18 15 / 70%)" }}>
           <ChevronDown size={20} />
         </div>
       </div>
@@ -360,7 +360,7 @@ function HeroSection() {
 function AboutSection() {
   const { ref, inView } = useInView();
   return (
-    <section id="about" className="py-24 md:py-32" style={{ background: "oklch(0.14 0.015 45)" }}>
+    <section id="about" className="py-24 md:py-32" style={{ background: "oklch(0.97 0.01 90)" }}>
       <div className="container">
         <div
           ref={ref}
@@ -373,51 +373,51 @@ function AboutSection() {
         >
           {/* Text */}
           <div>
-            <SectionLabel>Our Story</SectionLabel>
+            <SectionLabel>Historia Jonë</SectionLabel>
             <h2 style={{
               fontFamily: "'Playfair Display', serif",
               fontSize: "clamp(2rem, 4vw, 3rem)",
               fontWeight: 400,
-              color: "oklch(0.93 0.015 85)",
+              color: "oklch(0.35 0.08 40)",
               lineHeight: 1.2,
               marginBottom: "1.5rem",
             }}>
-              A Culinary Journey<br />
-              <em style={{ color: "oklch(0.76 0.16 75)" }}>in the Heart of Don Bosko</em>
+              Një Udhëtim<br />
+              <em style={{ color: "oklch(0.52 0.18 15)" }}>në Zemrën e Don Bosko</em>
             </h2>
-            <GoldDivider className="mb-6 max-w-xs" />
+            <BurgundyDivider className="mb-6 max-w-xs" />
             <p style={{
               fontFamily: "'Lato', sans-serif",
               fontSize: "1rem",
               lineHeight: 1.85,
-              color: "oklch(0.70 0.015 75)",
+              color: "oklch(0.35 0.08 40)",
               marginBottom: "1.2rem",
             }}>
-              Bosco Restaurant invites you to discover the culinary delights nestled in the heart of Don Bosko, Tirana. Our establishment offers a diverse and tantalizing menu featuring a wide selection of the freshest seafood, succulent cuts of meat, artisan pasta, and exquisite sushi.
+              Restorant Bosco ju fton të zbuloni kënaqësitë kulinare të vendosura në zemrën e Don Bosko, Tiranë. Vendimi ynë ofron një menu të larmishme dhe tërheqëse me një përzgjedhje të gjerë të peshkut më të freskët, mishit të shquar, paste artizanale dhe sushi ekzotik.
             </p>
             <p style={{
               fontFamily: "'Lato', sans-serif",
               fontSize: "1rem",
               lineHeight: 1.85,
-              color: "oklch(0.70 0.015 75)",
+              color: "oklch(0.35 0.08 40)",
               marginBottom: "2rem",
             }}>
-              Each dish is prepared with great care and quality, ensuring that every course is a pleasure for the senses. From the warm glow of our bamboo pendant lamps to the lush greenery that frames our dining room, every detail is crafted to create an unforgettable experience.
+              Çdo pjatë përgatitet me kujdes të madh dhe cilësi, duke siguruar që çdo kurs të jetë një kënaqësi për shqisat. Nga ndriçimi i ngrohtë i llambave të bambuut deri në jeshilinë e bollshme që rrethon sallën tonë të ngrënies, çdo detaj është hartuar për të krijuar një përvojë të paharrueshme.
             </p>
 
             {/* Stats */}
             <div className="grid grid-cols-3 gap-6">
               {[
-                { value: "4.7★", label: "Google Rating" },
-                { value: "216+", label: "Reviews" },
-                { value: "9.6", label: "Wolt Score" },
+                { value: "4.7★", label: "Vlerësim Google" },
+                { value: "216+", label: "Komente" },
+                { value: "9.6", label: "Rezultat Wolt" },
               ].map((stat) => (
                 <div key={stat.label} className="text-center">
                   <p style={{
                     fontFamily: "'Playfair Display', serif",
                     fontSize: "1.8rem",
                     fontWeight: 600,
-                    color: "oklch(0.76 0.16 75)",
+                    color: "oklch(0.52 0.18 15)",
                     lineHeight: 1,
                     marginBottom: "0.3rem",
                   }}>{stat.value}</p>
@@ -426,7 +426,7 @@ function AboutSection() {
                     fontSize: "0.6rem",
                     letterSpacing: "0.15em",
                     textTransform: "uppercase",
-                    color: "oklch(0.55 0.015 75)",
+                    color: "oklch(0.55 0.06 40)",
                   }}>{stat.label}</p>
                 </div>
               ))}
@@ -440,33 +440,34 @@ function AboutSection() {
                 src={INTERIOR_1}
                 alt="Bosco Restaurant interior"
                 className="w-full h-full object-cover"
-                style={{ filter: "brightness(0.85)" }}
+                style={{ filter: "brightness(0.95)" }}
               />
               <div className="absolute inset-0" style={{
-                background: "linear-gradient(to bottom, transparent 60%, oklch(0.14 0.015 45 / 40%))"
+                background: "linear-gradient(to bottom, transparent 60%, oklch(0.97 0.01 90 / 30%))"
               }} />
             </div>
             {/* Floating accent card */}
             <div className="absolute -bottom-6 -left-6 p-5" style={{
-              background: "oklch(0.18 0.012 45)",
-              border: "1px solid oklch(0.76 0.16 75 / 30%)",
+              background: "oklch(1 0 0)",
+              border: "2px solid oklch(0.52 0.18 15 / 30%)",
               maxWidth: "200px",
+              boxShadow: "0 8px 32px oklch(0 0 0 / 12%)",
             }}>
               <p style={{
                 fontFamily: "'Playfair Display', serif",
                 fontStyle: "italic",
                 fontSize: "0.9rem",
-                color: "oklch(0.76 0.16 75)",
+                color: "oklch(0.52 0.18 15)",
                 lineHeight: 1.5,
               }}>
-                "A restaurant that never disappoints."
+                "Një restorant që nuk zhgënjen kurrë."
               </p>
               <p style={{
                 fontFamily: "'Cinzel', serif",
                 fontSize: "0.55rem",
                 letterSpacing: "0.15em",
                 textTransform: "uppercase",
-                color: "oklch(0.55 0.015 75)",
+                color: "oklch(0.55 0.06 40)",
                 marginTop: "0.5rem",
               }}>— TripAdvisor</p>
             </div>
@@ -481,24 +482,24 @@ function AboutSection() {
 const menuCategories = [
   {
     id: "sea",
-    label: "From the Sea",
-    description: "The freshest catch, prepared with Mediterranean mastery. Our seafood selection celebrates the bounty of the Adriatic and beyond.",
+    label: "Nga Deti",
+    description: "Peshku më i freskët, i përpunuar me mjeshtëri mesdhetare. Përzgjedhja jonë e peshkut gëzon bollëkun e Adriatikut dhe përtej.",
     image: SEAFOOD_IMG,
-    items: ["Grilled Sea Bass", "Octopus Carpaccio", "Prawn Risotto", "Salmon Tartare", "Seafood Linguine"],
+    items: ["Branzin i Pjekur", "Kalamarit Carpaccio", "Risoto me Karkaleca", "Tartare Salmoni", "Linguine me Fruta Deti"],
   },
   {
     id: "earth",
-    label: "From the Earth",
-    description: "Premium cuts and artisan preparations that honour the finest meats. Each dish is a testament to our commitment to quality.",
+    label: "Nga Toka",
+    description: "Prerjet e para dhe përgatitjet artizanale që nderojnë mishin më të mirë. Çdo pjatë është dëshmi e përkushtimit tonë ndaj cilësisë.",
     image: MEAT_IMG,
-    items: ["Beef Tenderloin", "Lamb Chops", "Veal Milanese", "Grilled Chicken", "Mixed Grill"],
+    items: ["Tenderloin Viçi", "Costoleta Qingjali", "Vici Milanese", "Pula e Pjekur", "Grile i Përzier"],
   },
   {
     id: "sushi",
-    label: "Sushi & Specialities",
-    description: "Our sushi selection brings Japanese precision to the Albanian table. Fresh, elegant, and crafted with the finest ingredients.",
+    label: "Sushi & Specialitete",
+    description: "Përzgjedhja jonë e sushi sjell precizionin japonez në tryezën shqiptare. E freskët, elegante dhe e përpunuar me përbërësit më të mirë.",
     image: SUSHI_IMG,
-    items: ["Salmon Nigiri", "Tuna Maki", "Dragon Roll", "Prawn Tempura Roll", "Sashimi Platter"],
+    items: ["Nigiri Salmoni", "Maki Tunë", "Dragon Roll", "Rrotull Karkalecash", "Pjatë Sashimi"],
   },
 ];
 
@@ -508,7 +509,7 @@ function MenuSection() {
   const active = menuCategories.find(c => c.id === activeTab)!;
 
   return (
-    <section id="menu" className="py-24 md:py-32" style={{ background: "oklch(0.17 0.013 45)" }}>
+    <section id="menu" className="py-24 md:py-32" style={{ background: "oklch(0.99 0.005 90)" }}>
       <div className="container">
         <div
           ref={ref}
@@ -520,18 +521,18 @@ function MenuSection() {
         >
           {/* Header */}
           <div className="text-center mb-14">
-            <SectionLabel>Our Cuisine</SectionLabel>
+            <SectionLabel>Kuizina Jonë</SectionLabel>
             <h2 style={{
               fontFamily: "'Playfair Display', serif",
               fontSize: "clamp(2rem, 4vw, 3rem)",
               fontWeight: 400,
-              color: "oklch(0.93 0.015 85)",
+              color: "oklch(0.35 0.08 40)",
               lineHeight: 1.2,
               marginBottom: "1rem",
             }}>
-              A Menu for Every Palate
+              Një Menu për Çdo Shije
             </h2>
-            <GoldDivider className="max-w-xs mx-auto" />
+            <BurgundyDivider className="max-w-xs mx-auto" />
           </div>
 
           {/* Tab Navigation */}
@@ -547,31 +548,31 @@ function MenuSection() {
                   textTransform: "uppercase",
                   padding: "0.75rem 1.8rem",
                   background: activeTab === cat.id
-                    ? "linear-gradient(135deg, oklch(0.76 0.16 75), oklch(0.68 0.14 68))"
+                    ? "linear-gradient(135deg, oklch(0.52 0.18 15), oklch(0.45 0.16 12))"
                     : "transparent",
-                  color: activeTab === cat.id ? "oklch(0.14 0.015 45)" : "oklch(0.65 0.020 75)",
-                  border: "1px solid oklch(0.76 0.16 75 / 30%)",
+                  color: activeTab === cat.id ? "oklch(0.97 0.01 90)" : "oklch(0.55 0.06 40)",
+                  border: "2px solid oklch(0.52 0.18 15 / 40%)",
                   borderRight: "none",
                   transition: "all 0.3s ease",
                   cursor: "pointer",
                 }}
                 onMouseEnter={(e) => {
                   if (activeTab !== cat.id) {
-                    (e.currentTarget as HTMLElement).style.color = "oklch(0.76 0.16 75)";
-                    (e.currentTarget as HTMLElement).style.borderColor = "oklch(0.76 0.16 75 / 60%)";
+                    (e.currentTarget as HTMLElement).style.color = "oklch(0.52 0.18 15)";
+                    (e.currentTarget as HTMLElement).style.borderColor = "oklch(0.52 0.18 15)";
                   }
                 }}
                 onMouseLeave={(e) => {
                   if (activeTab !== cat.id) {
-                    (e.currentTarget as HTMLElement).style.color = "oklch(0.65 0.020 75)";
-                    (e.currentTarget as HTMLElement).style.borderColor = "oklch(0.76 0.16 75 / 30%)";
+                    (e.currentTarget as HTMLElement).style.color = "oklch(0.55 0.06 40)";
+                    (e.currentTarget as HTMLElement).style.borderColor = "oklch(0.52 0.18 15 / 40%)";
                   }
                 }}
               >
                 {cat.label}
               </button>
             ))}
-            <div style={{ borderRight: "1px solid oklch(0.76 0.16 75 / 30%)" }} />
+            <div style={{ borderRight: "2px solid oklch(0.52 0.18 15 / 40%)" }} />
           </div>
 
           {/* Active Category Content */}
@@ -584,12 +585,12 @@ function MenuSection() {
                 alt={active.label}
                 className="w-full h-full object-cover"
                 style={{
-                  filter: "brightness(0.85)",
+                  filter: "brightness(0.95)",
                   transition: "opacity 0.5s ease",
                 }}
               />
               <div className="absolute inset-0" style={{
-                background: "linear-gradient(135deg, oklch(0.14 0.015 45 / 30%), transparent)"
+                background: "linear-gradient(135deg, oklch(0.97 0.01 90 / 20%), transparent)"
               }} />
             </div>
 
@@ -599,36 +600,36 @@ function MenuSection() {
                 fontFamily: "'Playfair Display', serif",
                 fontSize: "1.8rem",
                 fontWeight: 400,
-                color: "oklch(0.93 0.015 85)",
+                color: "oklch(0.35 0.08 40)",
                 marginBottom: "0.75rem",
               }}>{active.label}</h3>
               <p style={{
                 fontFamily: "'Lato', sans-serif",
                 fontSize: "0.95rem",
                 lineHeight: 1.8,
-                color: "oklch(0.65 0.015 75)",
+                color: "oklch(0.35 0.08 40)",
                 marginBottom: "2rem",
               }}>{active.description}</p>
 
-              <GoldDivider className="mb-6" />
+              <BurgundyDivider className="mb-6" />
 
               <ul className="space-y-3">
                 {active.items.map((item, i) => (
                   <li key={item} className="flex items-center justify-between py-2" style={{
-                    borderBottom: i < active.items.length - 1 ? "1px solid oklch(1 0 0 / 6%)" : "none",
+                    borderBottom: i < active.items.length - 1 ? "1px solid oklch(0.52 0.18 15 / 12%)" : "none",
                   }}>
                     <span style={{
                       fontFamily: "'Playfair Display', serif",
                       fontSize: "1rem",
-                      color: "oklch(0.85 0.015 85)",
+                      color: "oklch(0.35 0.08 40)",
                     }}>{item}</span>
                     <span style={{
                       fontFamily: "'Cinzel', serif",
                       fontSize: "0.6rem",
                       letterSpacing: "0.1em",
-                      color: "oklch(0.76 0.16 75)",
+                      color: "oklch(0.52 0.18 15)",
                       textTransform: "uppercase",
-                    }}>Seasonal</span>
+                    }}>Sezonale</span>
                   </li>
                 ))}
               </ul>
@@ -644,17 +645,17 @@ function MenuSection() {
                     letterSpacing: "0.15em",
                     textTransform: "uppercase",
                     background: "transparent",
-                    color: "oklch(0.76 0.16 75)",
+                    color: "oklch(0.52 0.18 15)",
                     padding: "0.75rem 1.8rem",
                     textDecoration: "none",
                     display: "inline-flex",
                     alignItems: "center",
                     gap: "0.5rem",
-                    border: "1px solid oklch(0.76 0.16 75 / 50%)",
+                    border: "2px solid oklch(0.52 0.18 15)",
                     transition: "all 0.3s ease",
                   }}
                 >
-                  View Full Menu <ExternalLink size={12} />
+                  Shfletoni Menynë Të Plotë <ExternalLink size={12} />
                 </a>
               </div>
             </div>
@@ -662,17 +663,17 @@ function MenuSection() {
 
           {/* Menu Categories Grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16">
-            {["Salads", "Pasta & Risotto", "Desserts", "Soups & Sauces"].map((cat) => (
+            {["Sallatat", "Pasta & Risoto", "Ëmbëlsira", "Supat & Sosje"].map((cat) => (
               <div key={cat} className="text-center p-5" style={{
-                border: "1px solid oklch(0.76 0.16 75 / 20%)",
+                border: "2px solid oklch(0.52 0.18 15 / 20%)",
                 transition: "all 0.3s ease",
               }}
                 onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLElement).style.borderColor = "oklch(0.76 0.16 75 / 50%)";
-                  (e.currentTarget as HTMLElement).style.background = "oklch(0.76 0.16 75 / 5%)";
+                  (e.currentTarget as HTMLElement).style.borderColor = "oklch(0.52 0.18 15 / 60%)";
+                  (e.currentTarget as HTMLElement).style.background = "oklch(0.52 0.18 15 / 5%)";
                 }}
                 onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLElement).style.borderColor = "oklch(0.76 0.16 75 / 20%)";
+                  (e.currentTarget as HTMLElement).style.borderColor = "oklch(0.52 0.18 15 / 20%)";
                   (e.currentTarget as HTMLElement).style.background = "transparent";
                 }}
               >
@@ -681,7 +682,7 @@ function MenuSection() {
                   fontSize: "0.65rem",
                   letterSpacing: "0.15em",
                   textTransform: "uppercase",
-                  color: "oklch(0.76 0.16 75)",
+                  color: "oklch(0.52 0.18 15)",
                 }}>{cat}</p>
               </div>
             ))}
@@ -705,7 +706,7 @@ function GallerySection() {
   ];
 
   return (
-    <section id="gallery" className="py-24 md:py-32" style={{ background: "oklch(0.14 0.015 45)" }}>
+    <section id="gallery" className="py-24 md:py-32" style={{ background: "oklch(0.97 0.01 90)" }}>
       <div className="container">
         <div
           ref={ref}
@@ -716,15 +717,15 @@ function GallerySection() {
           }}
         >
           <div className="text-center mb-14">
-            <SectionLabel>Gallery</SectionLabel>
+            <SectionLabel>Galeria</SectionLabel>
             <h2 style={{
               fontFamily: "'Playfair Display', serif",
               fontSize: "clamp(2rem, 4vw, 3rem)",
               fontWeight: 400,
-              color: "oklch(0.93 0.015 85)",
+              color: "oklch(0.35 0.08 40)",
               lineHeight: 1.2,
             }}>
-              Moments at Bosco
+              Momente në Bosco
             </h2>
           </div>
 
@@ -739,10 +740,10 @@ function GallerySection() {
                   src={img.src}
                   alt={img.alt}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  style={{ filter: "brightness(0.8)" }}
+                  style={{ filter: "brightness(0.9)" }}
                 />
                 <div className="absolute inset-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100" style={{
-                  background: "oklch(0.76 0.16 75 / 15%)"
+                  background: "oklch(0.52 0.18 15 / 12%)"
                 }} />
               </div>
             ))}
@@ -758,19 +759,19 @@ const reviews = [
   {
     name: "Maria K.",
     rating: 5,
-    text: "A restaurant that never disappoints. From fish to meat dishes, to sushi, everything is prepared with great care and quality. Each course is a pleasure for the senses.",
+    text: "Një restorant që nuk zhgënjen kurrë. Nga peshku në pjata mishi, deri te sushi, gjithçka përgatitet me kujdes të madh dhe cilësi. Çdo kurs është një kënaqësi për shqisat.",
     source: "TripAdvisor",
   },
   {
     name: "Alessandro R.",
     rating: 5,
-    text: "The ambiance is stunning — warm candlelight, beautiful greenery, and impeccable service. The seafood pasta was the best I've had in Tirana. Highly recommended.",
+    text: "Ambienti është mahnitës — drita e ngrohtë e qirinjve, jeshila e bukur, dhe shërbim i përsosur. Pasta me fruta deti ishte më e mira që kam ngrënë në Tiranë. Shumë e rekomanduar.",
     source: "Google",
   },
   {
     name: "Elena M.",
     rating: 5,
-    text: "Bosco is our go-to for special occasions. The sushi is surprisingly excellent for an Albanian restaurant, and the meat dishes are cooked to perfection. A true gem.",
+    text: "Bosco është zgjedhja jonë për rastet e veçanta. Sushi është befasisht i shkëlqyer për një restorant shqiptar, dhe pjata mishi janë të gatuar në përfeksion. Një gjem i vërtetë.",
     source: "Google",
   },
 ];
@@ -778,7 +779,7 @@ const reviews = [
 function ReviewsSection() {
   const { ref, inView } = useInView();
   return (
-    <section id="reviews" className="py-24 md:py-32" style={{ background: "oklch(0.17 0.013 45)" }}>
+    <section id="reviews" className="py-24 md:py-32" style={{ background: "oklch(0.99 0.005 90)" }}>
       <div className="container">
         <div
           ref={ref}
@@ -789,17 +790,17 @@ function ReviewsSection() {
           }}
         >
           <div className="text-center mb-14">
-            <SectionLabel>What Our Guests Say</SectionLabel>
+            <SectionLabel>Çfarë Thonë Mysafirët Tanë</SectionLabel>
             <h2 style={{
               fontFamily: "'Playfair Display', serif",
               fontSize: "clamp(2rem, 4vw, 3rem)",
               fontWeight: 400,
-              color: "oklch(0.93 0.015 85)",
+              color: "oklch(0.35 0.08 40)",
               lineHeight: 1.2,
             }}>
-              Guest Experiences
+              Përvojat e Mysafirëve
             </h2>
-            <GoldDivider className="max-w-xs mx-auto mt-4" />
+            <BurgundyDivider className="max-w-xs mx-auto mt-4" />
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
@@ -808,18 +809,18 @@ function ReviewsSection() {
                 key={i}
                 className="p-8 relative"
                 style={{
-                  background: "oklch(0.14 0.015 45)",
-                  border: "1px solid oklch(0.76 0.16 75 / 20%)",
+                  background: "oklch(1 0 0)",
+                  border: "2px solid oklch(0.52 0.18 15 / 20%)",
                   transition: "all 0.3s ease",
                   animationDelay: `${i * 0.15}s`,
                 }}
                 onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLElement).style.borderColor = "oklch(0.76 0.16 75 / 50%)";
+                  (e.currentTarget as HTMLElement).style.borderColor = "oklch(0.52 0.18 15 / 50%)";
                   (e.currentTarget as HTMLElement).style.transform = "translateY(-4px)";
-                  (e.currentTarget as HTMLElement).style.boxShadow = "0 12px 40px oklch(0.76 0.16 75 / 10%)";
+                  (e.currentTarget as HTMLElement).style.boxShadow = "0 12px 40px oklch(0.52 0.18 15 / 12%)";
                 }}
                 onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLElement).style.borderColor = "oklch(0.76 0.16 75 / 20%)";
+                  (e.currentTarget as HTMLElement).style.borderColor = "oklch(0.52 0.18 15 / 20%)";
                   (e.currentTarget as HTMLElement).style.transform = "translateY(0)";
                   (e.currentTarget as HTMLElement).style.boxShadow = "none";
                 }}
@@ -828,7 +829,7 @@ function ReviewsSection() {
                 <div style={{
                   fontFamily: "'Playfair Display', serif",
                   fontSize: "4rem",
-                  color: "oklch(0.76 0.16 75 / 30%)",
+                  color: "oklch(0.52 0.18 15 / 25%)",
                   lineHeight: 0.8,
                   marginBottom: "1rem",
                 }}>"</div>
@@ -837,31 +838,31 @@ function ReviewsSection() {
                   fontFamily: "'Lato', sans-serif",
                   fontSize: "0.95rem",
                   lineHeight: 1.8,
-                  color: "oklch(0.70 0.015 75)",
+                  color: "oklch(0.35 0.08 40)",
                   marginBottom: "1.5rem",
                   fontStyle: "italic",
                 }}>{review.text}</p>
 
-                <GoldDivider className="mb-4" />
+                <BurgundyDivider className="mb-4" />
 
                 <div className="flex items-center justify-between">
                   <div>
                     <p style={{
                       fontFamily: "'Playfair Display', serif",
                       fontSize: "0.95rem",
-                      color: "oklch(0.85 0.015 85)",
+                      color: "oklch(0.35 0.08 40)",
                     }}>{review.name}</p>
                     <p style={{
                       fontFamily: "'Cinzel', serif",
                       fontSize: "0.55rem",
                       letterSpacing: "0.15em",
                       textTransform: "uppercase",
-                      color: "oklch(0.55 0.015 75)",
+                      color: "oklch(0.55 0.06 40)",
                     }}>{review.source}</p>
                   </div>
                   <div className="flex gap-0.5">
                     {[1,2,3,4,5].map(s => (
-                      <Star key={s} size={11} fill="oklch(0.76 0.16 75)" color="oklch(0.76 0.16 75)" />
+                      <Star key={s} size={11} fill="oklch(0.52 0.18 15)" color="oklch(0.52 0.18 15)" />
                     ))}
                   </div>
                 </div>
@@ -875,12 +876,12 @@ function ReviewsSection() {
               fontFamily: "'Playfair Display', serif",
               fontSize: "3.5rem",
               fontWeight: 400,
-              color: "oklch(0.76 0.16 75)",
+              color: "oklch(0.52 0.18 15)",
               lineHeight: 1,
             }}>4.7</p>
             <div className="flex justify-center gap-1 my-2">
               {[1,2,3,4,5].map(s => (
-                <Star key={s} size={16} fill={s <= 4 ? "oklch(0.76 0.16 75)" : "none"} color="oklch(0.76 0.16 75)" />
+                <Star key={s} size={16} fill={s <= 4 ? "oklch(0.52 0.18 15)" : "none"} color="oklch(0.52 0.18 15)" />
               ))}
             </div>
             <p style={{
@@ -888,8 +889,8 @@ function ReviewsSection() {
               fontSize: "0.65rem",
               letterSpacing: "0.15em",
               textTransform: "uppercase",
-              color: "oklch(0.55 0.015 75)",
-            }}>Based on 216 Google Reviews</p>
+              color: "oklch(0.55 0.06 40)",
+            }}>Bazuar në 216 Komente Google</p>
           </div>
         </div>
       </div>
@@ -907,10 +908,10 @@ function ReservationSection() {
           src={INTERIOR_3}
           alt="Bosco Restaurant ambiance"
           className="w-full h-full object-cover"
-          style={{ filter: "brightness(0.35)" }}
+          style={{ filter: "brightness(0.6)" }}
         />
         <div className="absolute inset-0" style={{
-          background: "linear-gradient(135deg, oklch(0.14 0.015 45 / 80%), oklch(0.14 0.015 45 / 50%))"
+          background: "linear-gradient(135deg, oklch(0.97 0.01 90 / 70%), oklch(0.97 0.01 90 / 40%))"
         }} />
       </div>
 
@@ -923,26 +924,26 @@ function ReservationSection() {
             transition: "all 0.9s ease-out",
           }}
         >
-          <SectionLabel>Reservations</SectionLabel>
+          <SectionLabel>Rezervime</SectionLabel>
           <h2 style={{
             fontFamily: "'Playfair Display', serif",
             fontSize: "clamp(2.2rem, 5vw, 3.5rem)",
             fontWeight: 400,
-            color: "oklch(0.93 0.015 85)",
+            color: "oklch(0.35 0.08 40)",
             lineHeight: 1.2,
             marginBottom: "1rem",
           }}>
-            Reserve Your Table
+            Rezervo Tavolën Tuaj
           </h2>
           <p style={{
             fontFamily: "'Lato', sans-serif",
             fontSize: "1rem",
-            color: "oklch(0.70 0.015 75)",
+            color: "oklch(0.35 0.08 40)",
             maxWidth: "480px",
             margin: "0 auto 2.5rem",
             lineHeight: 1.8,
           }}>
-            Join us for an unforgettable dining experience. Book your table through our reservation partner or call us directly.
+            Bashkohuni me ne për një përvojë ngrënie të paharrueshme. Rezervoni tavolën tuaj përmes partnerit tonë të rezervimeve ose na telefononi drejtpërdrejt.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -955,15 +956,15 @@ function ReservationSection() {
                 fontSize: "0.7rem",
                 letterSpacing: "0.15em",
                 textTransform: "uppercase",
-                background: "linear-gradient(135deg, oklch(0.76 0.16 75), oklch(0.68 0.14 68))",
-                color: "oklch(0.14 0.015 45)",
+                background: "linear-gradient(135deg, oklch(0.52 0.18 15), oklch(0.45 0.16 12))",
+                color: "oklch(0.97 0.01 90)",
                 padding: "0.9rem 2.5rem",
                 textDecoration: "none",
                 display: "inline-block",
                 transition: "all 0.3s ease",
               }}
             >
-              Book via SeatMe
+              Rezervo përmes SeatMe
             </a>
             <a
               href="tel:+355692033241"
@@ -973,13 +974,13 @@ function ReservationSection() {
                 letterSpacing: "0.15em",
                 textTransform: "uppercase",
                 background: "transparent",
-                color: "oklch(0.76 0.16 75)",
+                color: "oklch(0.52 0.18 15)",
                 padding: "0.9rem 2.5rem",
                 textDecoration: "none",
                 display: "inline-flex",
                 alignItems: "center",
                 gap: "0.5rem",
-                border: "1px solid oklch(0.76 0.16 75 / 60%)",
+                border: "2px solid oklch(0.52 0.18 15)",
                 transition: "all 0.3s ease",
               }}
             >
@@ -990,9 +991,9 @@ function ReservationSection() {
           {/* Hours */}
           <div className="mt-12 flex flex-wrap justify-center gap-8">
             {[
-              { day: "Monday – Sunday", hours: "Open All Day · Closes 11:30 PM" },
-              { day: "Outdoor Seating", hours: "Available" },
-              { day: "Order Delivery", hours: "Via Wolt" },
+              { day: "E Hënë – E Diel", hours: "Hapje Gjithë Ditën · Mbyllet 23:30" },
+              { day: "Ulëse në Jashtë", hours: "Në Dispozicion" },
+              { day: "Porosit Ushqim", hours: "Përmes Wolt" },
             ].map((item) => (
               <div key={item.day} className="text-center">
                 <p style={{
@@ -1000,13 +1001,13 @@ function ReservationSection() {
                   fontSize: "0.6rem",
                   letterSpacing: "0.15em",
                   textTransform: "uppercase",
-                  color: "oklch(0.76 0.16 75)",
+                  color: "oklch(0.52 0.18 15)",
                   marginBottom: "0.3rem",
                 }}>{item.day}</p>
                 <p style={{
                   fontFamily: "'Lato', sans-serif",
                   fontSize: "0.85rem",
-                  color: "oklch(0.65 0.015 75)",
+                  color: "oklch(0.35 0.08 40)",
                 }}>{item.hours}</p>
               </div>
             ))}
@@ -1021,7 +1022,7 @@ function ReservationSection() {
 function ContactSection() {
   const { ref, inView } = useInView();
   return (
-    <section id="contact" className="py-24 md:py-32" style={{ background: "oklch(0.14 0.015 45)" }}>
+    <section id="contact" className="py-24 md:py-32" style={{ background: "oklch(0.97 0.01 90)" }}>
       <div className="container">
         <div
           ref={ref}
@@ -1034,46 +1035,46 @@ function ContactSection() {
         >
           {/* Info */}
           <div>
-            <SectionLabel>Find Us</SectionLabel>
+            <SectionLabel>Na Gjeni</SectionLabel>
             <h2 style={{
               fontFamily: "'Playfair Display', serif",
               fontSize: "clamp(2rem, 4vw, 2.8rem)",
               fontWeight: 400,
-              color: "oklch(0.93 0.015 85)",
+              color: "oklch(0.35 0.08 40)",
               lineHeight: 1.2,
               marginBottom: "2rem",
             }}>
-              Visit Bosco Restaurant
+              Vizitoni Bosco
             </h2>
-            <GoldDivider className="mb-8 max-w-xs" />
+            <BurgundyDivider className="mb-8 max-w-xs" />
 
             <div className="space-y-6">
               <div className="flex gap-4">
-                <MapPin size={18} style={{ color: "oklch(0.76 0.16 75)", flexShrink: 0, marginTop: "2px" }} />
+                <MapPin size={18} style={{ color: "oklch(0.52 0.18 15)", flexShrink: 0, marginTop: "2px" }} />
                 <div>
-                  <p style={{ fontFamily: "'Cinzel', serif", fontSize: "0.6rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "oklch(0.55 0.015 75)", marginBottom: "0.3rem" }}>Address</p>
-                  <p style={{ fontFamily: "'Lato', sans-serif", fontSize: "0.95rem", color: "oklch(0.80 0.015 85)", lineHeight: 1.6 }}>
-                    Rruga Don Bosko<br />Tiranë, Albania
+                  <p style={{ fontFamily: "'Cinzel', serif", fontSize: "0.6rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "oklch(0.55 0.06 40)", marginBottom: "0.3rem" }}>Adresa</p>
+                  <p style={{ fontFamily: "'Lato', sans-serif", fontSize: "0.95rem", color: "oklch(0.35 0.08 40)", lineHeight: 1.6 }}>
+                    Rruga Don Bosko<br />Tiranë, Shqipëri
                   </p>
                 </div>
               </div>
 
               <div className="flex gap-4">
-                <Phone size={18} style={{ color: "oklch(0.76 0.16 75)", flexShrink: 0, marginTop: "2px" }} />
+                <Phone size={18} style={{ color: "oklch(0.52 0.18 15)", flexShrink: 0, marginTop: "2px" }} />
                 <div>
-                  <p style={{ fontFamily: "'Cinzel', serif", fontSize: "0.6rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "oklch(0.55 0.015 75)", marginBottom: "0.3rem" }}>Phone</p>
-                  <a href="tel:+355692033241" style={{ fontFamily: "'Lato', sans-serif", fontSize: "0.95rem", color: "oklch(0.80 0.015 85)", textDecoration: "none" }}>
+                  <p style={{ fontFamily: "'Cinzel', serif", fontSize: "0.6rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "oklch(0.55 0.06 40)", marginBottom: "0.3rem" }}>Telefon</p>
+                  <a href="tel:+355692033241" style={{ fontFamily: "'Lato', sans-serif", fontSize: "0.95rem", color: "oklch(0.35 0.08 40)", textDecoration: "none" }}>
                     +355 69 203 3241
                   </a>
                 </div>
               </div>
 
               <div className="flex gap-4">
-                <Clock size={18} style={{ color: "oklch(0.76 0.16 75)", flexShrink: 0, marginTop: "2px" }} />
+                <Clock size={18} style={{ color: "oklch(0.52 0.18 15)", flexShrink: 0, marginTop: "2px" }} />
                 <div>
-                  <p style={{ fontFamily: "'Cinzel', serif", fontSize: "0.6rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "oklch(0.55 0.015 75)", marginBottom: "0.3rem" }}>Hours</p>
-                  <p style={{ fontFamily: "'Lato', sans-serif", fontSize: "0.95rem", color: "oklch(0.80 0.015 85)", lineHeight: 1.6 }}>
-                    Monday – Sunday<br />Open All Day · Closes 11:30 PM
+                  <p style={{ fontFamily: "'Cinzel', serif", fontSize: "0.6rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "oklch(0.55 0.06 40)", marginBottom: "0.3rem" }}>Orari</p>
+                  <p style={{ fontFamily: "'Lato', sans-serif", fontSize: "0.95rem", color: "oklch(0.35 0.08 40)", lineHeight: 1.6 }}>
+                    E Hënë – E Diel<br />Hapje Gjithë Ditën · Mbyllet 23:30
                   </p>
                 </div>
               </div>
@@ -1081,7 +1082,7 @@ function ContactSection() {
 
             {/* Social */}
             <div className="mt-10">
-              <p style={{ fontFamily: "'Cinzel', serif", fontSize: "0.6rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "oklch(0.55 0.015 75)", marginBottom: "1rem" }}>Follow Us</p>
+              <p style={{ fontFamily: "'Cinzel', serif", fontSize: "0.6rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "oklch(0.55 0.06 40)", marginBottom: "1rem" }}>Ndiqni Ne</p>
               <div className="flex gap-4">
                 {[
                   { icon: <Instagram size={18} />, href: "#", label: "Instagram" },
@@ -1093,21 +1094,21 @@ function ContactSection() {
                     href={social.href}
                     aria-label={social.label}
                     style={{
-                      color: "oklch(0.65 0.020 75)",
+                      color: "oklch(0.55 0.06 40)",
                       padding: "0.6rem",
-                      border: "1px solid oklch(0.76 0.16 75 / 25%)",
+                      border: "2px solid oklch(0.52 0.18 15 / 25%)",
                       display: "inline-flex",
                       transition: "all 0.3s ease",
                       textDecoration: "none",
                     }}
                     onMouseEnter={(e) => {
-                      (e.currentTarget as HTMLElement).style.color = "oklch(0.76 0.16 75)";
-                      (e.currentTarget as HTMLElement).style.borderColor = "oklch(0.76 0.16 75 / 60%)";
-                      (e.currentTarget as HTMLElement).style.background = "oklch(0.76 0.16 75 / 8%)";
+                      (e.currentTarget as HTMLElement).style.color = "oklch(0.52 0.18 15)";
+                      (e.currentTarget as HTMLElement).style.borderColor = "oklch(0.52 0.18 15 / 60%)";
+                      (e.currentTarget as HTMLElement).style.background = "oklch(0.52 0.18 15 / 8%)";
                     }}
                     onMouseLeave={(e) => {
-                      (e.currentTarget as HTMLElement).style.color = "oklch(0.65 0.020 75)";
-                      (e.currentTarget as HTMLElement).style.borderColor = "oklch(0.76 0.16 75 / 25%)";
+                      (e.currentTarget as HTMLElement).style.color = "oklch(0.55 0.06 40)";
+                      (e.currentTarget as HTMLElement).style.borderColor = "oklch(0.52 0.18 15 / 25%)";
                       (e.currentTarget as HTMLElement).style.background = "transparent";
                     }}
                   >
@@ -1126,7 +1127,6 @@ function ContactSection() {
               height="100%"
               style={{
                 border: "none",
-                filter: "invert(90%) hue-rotate(180deg) brightness(0.85) contrast(0.9)",
                 minHeight: "400px",
               }}
               allowFullScreen
@@ -1135,7 +1135,7 @@ function ContactSection() {
               title="Bosco Restaurant Location"
             />
             <div className="absolute inset-0 pointer-events-none" style={{
-              border: "1px solid oklch(0.76 0.16 75 / 25%)"
+              border: "2px solid oklch(0.52 0.18 15 / 25%)"
             }} />
           </div>
         </div>
@@ -1147,7 +1147,7 @@ function ContactSection() {
 // ─── Footer ───────────────────────────────────────────────────────────────────
 function Footer() {
   return (
-    <footer style={{ background: "oklch(0.11 0.012 45)", borderTop: "1px solid oklch(0.76 0.16 75 / 15%)" }}>
+    <footer style={{ background: "oklch(0.92 0.01 85)", borderTop: "2px solid oklch(0.52 0.18 15 / 15%)" }}>
       <div className="container py-12">
         <div className="grid md:grid-cols-3 gap-10 mb-10">
           {/* Brand */}
@@ -1156,7 +1156,7 @@ function Footer() {
               fontFamily: "'Cinzel', serif",
               fontSize: "1.4rem",
               fontWeight: 600,
-              color: "oklch(0.76 0.16 75)",
+              color: "oklch(0.52 0.18 15)",
               letterSpacing: "0.18em",
               marginBottom: "0.3rem",
             }}>BOSCO</p>
@@ -1164,33 +1164,33 @@ function Footer() {
               fontFamily: "'Lato', sans-serif",
               fontSize: "0.6rem",
               letterSpacing: "0.3em",
-              color: "oklch(0.55 0.015 75)",
+              color: "oklch(0.55 0.06 40)",
               textTransform: "uppercase",
               marginBottom: "1rem",
-            }}>RESTAURANT · TIRANA</p>
+            }}>RESTORANT · TIRANË</p>
             <p style={{
               fontFamily: "'Playfair Display', serif",
               fontStyle: "italic",
               fontSize: "0.9rem",
-              color: "oklch(0.55 0.015 75)",
-            }}>Eat, enjoy, repeat.</p>
+              color: "oklch(0.55 0.06 40)",
+            }}>Hani, shijoni, përsëritni.</p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <p style={{ fontFamily: "'Cinzel', serif", fontSize: "0.6rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "oklch(0.76 0.16 75)", marginBottom: "1rem" }}>Quick Links</p>
+            <p style={{ fontFamily: "'Cinzel', serif", fontSize: "0.6rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "oklch(0.52 0.18 15)", marginBottom: "1rem" }}>Lidhje të Shpejta</p>
             <ul className="space-y-2">
-              {["About", "Menu", "Gallery", "Reviews", "Contact"].map((link) => (
+              {["Rreth Nesh", "Menu", "Galeria", "Komente", "Kontakti"].map((link) => (
                 <li key={link}>
                   <a href={`#${link.toLowerCase()}`} style={{
                     fontFamily: "'Lato', sans-serif",
                     fontSize: "0.85rem",
-                    color: "oklch(0.55 0.015 75)",
+                    color: "oklch(0.55 0.06 40)",
                     textDecoration: "none",
                     transition: "color 0.3s",
                   }}
-                    onMouseEnter={(e) => (e.currentTarget.style.color = "oklch(0.76 0.16 75)")}
-                    onMouseLeave={(e) => (e.currentTarget.style.color = "oklch(0.55 0.015 75)")}
+                    onMouseEnter={(e) => (e.currentTarget.style.color = "oklch(0.52 0.18 15)")}
+                    onMouseLeave={(e) => (e.currentTarget.style.color = "oklch(0.55 0.06 40)")}
                   >{link}</a>
                 </li>
               ))}
@@ -1199,28 +1199,28 @@ function Footer() {
 
           {/* Contact */}
           <div>
-            <p style={{ fontFamily: "'Cinzel', serif", fontSize: "0.6rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "oklch(0.76 0.16 75)", marginBottom: "1rem" }}>Contact</p>
+            <p style={{ fontFamily: "'Cinzel', serif", fontSize: "0.6rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "oklch(0.52 0.18 15)", marginBottom: "1rem" }}>Kontakti</p>
             <div className="space-y-2">
-              <p style={{ fontFamily: "'Lato', sans-serif", fontSize: "0.85rem", color: "oklch(0.55 0.015 75)" }}>Rruga Don Bosko, Tiranë</p>
-              <a href="tel:+355692033241" style={{ fontFamily: "'Lato', sans-serif", fontSize: "0.85rem", color: "oklch(0.55 0.015 75)", textDecoration: "none", display: "block" }}>+355 69 203 3241</a>
-              <p style={{ fontFamily: "'Lato', sans-serif", fontSize: "0.85rem", color: "oklch(0.55 0.015 75)" }}>Open Daily · Closes 11:30 PM</p>
+              <p style={{ fontFamily: "'Lato', sans-serif", fontSize: "0.85rem", color: "oklch(0.55 0.06 40)" }}>Rruga Don Bosko, Tiranë</p>
+              <a href="tel:+355692033241" style={{ fontFamily: "'Lato', sans-serif", fontSize: "0.85rem", color: "oklch(0.55 0.06 40)", textDecoration: "none", display: "block" }}>+355 69 203 3241</a>
+              <p style={{ fontFamily: "'Lato', sans-serif", fontSize: "0.85rem", color: "oklch(0.55 0.06 40)" }}>Hapje Çdo Ditë · Mbyllet 23:30</p>
             </div>
           </div>
         </div>
 
-        <GoldDivider className="mb-6" />
+        <BurgundyDivider className="mb-6" />
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <p style={{ fontFamily: "'Lato', sans-serif", fontSize: "0.75rem", color: "oklch(0.40 0.010 75)" }}>
-            © {new Date().getFullYear()} Bosco Restaurant. All rights reserved.
+          <p style={{ fontFamily: "'Lato', sans-serif", fontSize: "0.75rem", color: "oklch(0.55 0.06 40)" }}>
+            © {new Date().getFullYear()} Bosco Restaurant. Të gjitha të drejtat e rezervuara.
           </p>
           <div className="flex gap-4">
-            <a href="https://seatme.al" target="_blank" rel="noopener noreferrer" style={{ fontFamily: "'Cinzel', serif", fontSize: "0.6rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "oklch(0.76 0.16 75)", textDecoration: "none" }}>
-              Reserve a Table
+            <a href="https://seatme.al" target="_blank" rel="noopener noreferrer" style={{ fontFamily: "'Cinzel', serif", fontSize: "0.6rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "oklch(0.52 0.18 15)", textDecoration: "none" }}>
+              Rezervo Tavolë
             </a>
-            <span style={{ color: "oklch(0.40 0.010 75)" }}>·</span>
-            <a href="https://wolt.com/en/alb/tirana/restaurant/bosco-restaurant" target="_blank" rel="noopener noreferrer" style={{ fontFamily: "'Cinzel', serif", fontSize: "0.6rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "oklch(0.76 0.16 75)", textDecoration: "none" }}>
-              Order Delivery
+            <span style={{ color: "oklch(0.55 0.06 40)" }}>·</span>
+            <a href="https://wolt.com/en/alb/tirana/restaurant/bosco-restaurant" target="_blank" rel="noopener noreferrer" style={{ fontFamily: "'Cinzel', serif", fontSize: "0.6rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "oklch(0.52 0.18 15)", textDecoration: "none" }}>
+              Porosit Ushqim
             </a>
           </div>
         </div>
@@ -1232,7 +1232,7 @@ function Footer() {
 // ─── Main Export ──────────────────────────────────────────────────────────────
 export default function Home() {
   return (
-    <div className="min-h-screen" style={{ background: "oklch(0.14 0.015 45)" }}>
+    <div className="min-h-screen" style={{ background: "oklch(0.97 0.01 90)" }}>
       <Navbar />
       <HeroSection />
       <AboutSection />

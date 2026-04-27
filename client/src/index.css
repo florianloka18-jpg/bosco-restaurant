@@ -1,9 +1,9 @@
 /* 
- * BOSCO RESTAURANT — DARK LUXURY / CINEMATIC FINE DINING
- * Design Philosophy: Deep near-black backgrounds, burnished gold accents, 
- * cinematic proportions, restrained elegance.
+ * BOSCO RESTAURANT — BRIGHT ELEGANT FINE DINING
+ * Design Philosophy: Cream/white backgrounds, deep burgundy/gold accents, 
+ * excellent readability, warm and inviting.
  * Typography: Playfair Display (display) + Lato (body) + Cinzel (accent)
- * Colors: Deep espresso bg, burnished gold primary, warm cream text
+ * Colors: Cream bg, deep burgundy primary, warm brown text
  */
 
 @import "tailwindcss";
@@ -50,58 +50,56 @@
   --color-sidebar-ring: var(--sidebar-ring);
   
   /* Custom Bosco colors */
-  --color-gold: var(--gold);
-  --color-gold-light: var(--gold-light);
-  --color-gold-dark: var(--gold-dark);
-  --color-espresso: var(--espresso);
-  --color-charcoal: var(--charcoal);
+  --color-burgundy: var(--burgundy);
+  --color-burgundy-light: var(--burgundy-light);
+  --color-burgundy-dark: var(--burgundy-dark);
   --color-cream: var(--cream);
+  --color-brown: var(--brown);
 }
 
 :root {
-  /* Dark luxury palette */
-  --gold: oklch(0.76 0.16 75);           /* Burnished gold */
-  --gold-light: oklch(0.86 0.12 80);     /* Light gold */
-  --gold-dark: oklch(0.58 0.14 68);      /* Deep gold */
-  --espresso: oklch(0.14 0.015 45);      /* Deep near-black warm */
-  --charcoal: oklch(0.20 0.012 45);      /* Dark charcoal */
-  --cream: oklch(0.93 0.015 85);         /* Warm cream */
+  /* Bright elegant palette */
+  --burgundy: oklch(0.52 0.18 15);        /* Deep burgundy/wine */
+  --burgundy-light: oklch(0.65 0.14 20);  /* Light burgundy */
+  --burgundy-dark: oklch(0.38 0.16 12);   /* Very dark burgundy */
+  --cream: oklch(0.97 0.01 90);           /* Off-white cream */
+  --brown: oklch(0.35 0.08 40);           /* Deep warm brown */
   
-  --radius: 0.25rem;
+  --radius: 0.35rem;
   
-  /* Semantic tokens — dark theme as default */
-  --background: oklch(0.14 0.015 45);
-  --foreground: oklch(0.93 0.015 85);
-  --card: oklch(0.18 0.012 45);
-  --card-foreground: oklch(0.93 0.015 85);
-  --popover: oklch(0.18 0.012 45);
-  --popover-foreground: oklch(0.93 0.015 85);
-  --primary: oklch(0.76 0.16 75);
-  --primary-foreground: oklch(0.14 0.015 45);
-  --secondary: oklch(0.22 0.012 45);
-  --secondary-foreground: oklch(0.93 0.015 85);
-  --muted: oklch(0.22 0.010 45);
-  --muted-foreground: oklch(0.65 0.020 75);
-  --accent: oklch(0.22 0.012 45);
-  --accent-foreground: oklch(0.93 0.015 85);
+  /* Semantic tokens — light theme */
+  --background: oklch(0.97 0.01 90);
+  --foreground: oklch(0.35 0.08 40);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.35 0.08 40);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.35 0.08 40);
+  --primary: oklch(0.52 0.18 15);
+  --primary-foreground: oklch(0.97 0.01 90);
+  --secondary: oklch(0.92 0.02 85);
+  --secondary-foreground: oklch(0.35 0.08 40);
+  --muted: oklch(0.88 0.02 85);
+  --muted-foreground: oklch(0.55 0.06 40);
+  --accent: oklch(0.65 0.14 20);
+  --accent-foreground: oklch(0.35 0.08 40);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 12%);
-  --ring: oklch(0.76 0.16 75);
-  --chart-1: oklch(0.76 0.16 75);
-  --chart-2: oklch(0.62 0.12 50);
-  --chart-3: oklch(0.50 0.10 40);
-  --chart-4: oklch(0.40 0.08 35);
-  --chart-5: oklch(0.30 0.06 30);
-  --sidebar: oklch(0.18 0.012 45);
-  --sidebar-foreground: oklch(0.93 0.015 85);
-  --sidebar-primary: oklch(0.76 0.16 75);
-  --sidebar-primary-foreground: oklch(0.14 0.015 45);
-  --sidebar-accent: oklch(0.22 0.012 45);
-  --sidebar-accent-foreground: oklch(0.93 0.015 85);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.76 0.16 75);
+  --border: oklch(0.92 0.01 85);
+  --input: oklch(0.95 0.01 85);
+  --ring: oklch(0.52 0.18 15);
+  --chart-1: oklch(0.52 0.18 15);
+  --chart-2: oklch(0.65 0.14 20);
+  --chart-3: oklch(0.72 0.10 30);
+  --chart-4: oklch(0.78 0.08 40);
+  --chart-5: oklch(0.85 0.05 50);
+  --sidebar: oklch(0.97 0.01 90);
+  --sidebar-foreground: oklch(0.35 0.08 40);
+  --sidebar-primary: oklch(0.52 0.18 15);
+  --sidebar-primary-foreground: oklch(0.97 0.01 90);
+  --sidebar-accent: oklch(0.88 0.02 85);
+  --sidebar-accent-foreground: oklch(0.35 0.08 40);
+  --sidebar-border: oklch(0.92 0.01 85);
+  --sidebar-ring: oklch(0.52 0.18 15);
 }
 
 @layer base {
@@ -157,15 +155,15 @@
     }
   }
   
-  /* Gold divider line */
-  .gold-divider {
-    height: 1px;
-    background: linear-gradient(90deg, transparent, oklch(0.76 0.16 75), transparent);
+  /* Burgundy divider line */
+  .burgundy-divider {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, oklch(0.52 0.18 15), transparent);
   }
   
-  /* Gold text shimmer */
-  .gold-text {
-    color: oklch(0.76 0.16 75);
+  /* Burgundy text */
+  .burgundy-text {
+    color: oklch(0.52 0.18 15);
   }
   
   /* Cinzel font for labels */
@@ -181,21 +179,10 @@
     font-style: italic;
   }
   
-  /* Grain texture overlay */
-  .grain-overlay::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E");
-    pointer-events: none;
-    opacity: 0.04;
-    z-index: 1;
-  }
-  
-  /* Gold button */
-  .btn-gold {
-    background: linear-gradient(135deg, oklch(0.76 0.16 75), oklch(0.68 0.14 68));
-    color: oklch(0.14 0.015 45);
+  /* Burgundy button */
+  .btn-burgundy {
+    background: linear-gradient(135deg, oklch(0.52 0.18 15), oklch(0.45 0.16 12));
+    color: oklch(0.97 0.01 90);
     font-family: 'Cinzel', serif;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -207,28 +194,28 @@
     overflow: hidden;
   }
   
-  .btn-gold:hover {
-    background: linear-gradient(135deg, oklch(0.82 0.14 78), oklch(0.76 0.16 75));
-    box-shadow: 0 0 20px oklch(0.76 0.16 75 / 30%);
+  .btn-burgundy:hover {
+    background: linear-gradient(135deg, oklch(0.58 0.16 18), oklch(0.52 0.18 15));
+    box-shadow: 0 0 20px oklch(0.52 0.18 15 / 25%);
     transform: translateY(-1px);
   }
   
-  .btn-outline-gold {
+  .btn-outline-burgundy {
     background: transparent;
-    color: oklch(0.76 0.16 75);
+    color: oklch(0.52 0.18 15);
     font-family: 'Cinzel', serif;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     font-size: 0.75rem;
     padding: 0.75rem 2rem;
-    border: 1px solid oklch(0.76 0.16 75 / 60%);
+    border: 2px solid oklch(0.52 0.18 15);
     transition: all 0.3s ease;
   }
   
-  .btn-outline-gold:hover {
-    background: oklch(0.76 0.16 75 / 10%);
-    border-color: oklch(0.76 0.16 75);
-    box-shadow: 0 0 15px oklch(0.76 0.16 75 / 20%);
+  .btn-outline-burgundy:hover {
+    background: oklch(0.52 0.18 15 / 8%);
+    border-color: oklch(0.52 0.18 15);
+    box-shadow: 0 0 15px oklch(0.52 0.18 15 / 15%);
   }
 }
 
@@ -271,12 +258,12 @@
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: oklch(0.14 0.015 45);
+  background: oklch(0.97 0.01 90);
 }
 ::-webkit-scrollbar-thumb {
-  background: oklch(0.76 0.16 75 / 40%);
+  background: oklch(0.52 0.18 15 / 40%);
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: oklch(0.76 0.16 75 / 70%);
+  background: oklch(0.52 0.18 15 / 70%);
 }
