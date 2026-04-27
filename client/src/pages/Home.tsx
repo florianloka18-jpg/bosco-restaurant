@@ -247,9 +247,10 @@ function HeroSection() {
 
       {/* Content */}
       <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
-        <p className="cinzel text-xs tracking-widest mb-6 animate-fade-in" style={{
+        <p className="cinzel tracking-widest mb-6 animate-fade-in" style={{
           color: "oklch(0.52 0.18 15)",
           fontFamily: "'Cinzel', serif",
+          fontSize: "1rem",
           letterSpacing: "0.3em",
           textTransform: "uppercase",
           animationDelay: "0.2s",
@@ -261,7 +262,7 @@ function HeroSection() {
 
         <h1 className="animate-letter-expand" style={{
           fontFamily: "'Playfair Display', serif",
-          fontSize: "clamp(3.5rem, 10vw, 7rem)",
+          fontSize: "clamp(5rem, 15vw, 9rem)",
           fontWeight: 400,
           color: "oklch(0.35 0.08 40)",
           lineHeight: 1.05,
@@ -277,7 +278,7 @@ function HeroSection() {
         <p className="animate-fade-in-up" style={{
           fontFamily: "'Playfair Display', serif",
           fontStyle: "italic",
-          fontSize: "clamp(1rem, 2.5vw, 1.4rem)",
+          fontSize: "clamp(1.5rem, 4vw, 2.2rem)",
           color: "oklch(0.52 0.18 15)",
           marginBottom: "2.5rem",
           opacity: 0,
@@ -298,15 +299,16 @@ function HeroSection() {
             rel="noopener noreferrer"
             style={{
               fontFamily: "'Cinzel', serif",
-              fontSize: "0.7rem",
+              fontSize: "1rem",
               letterSpacing: "0.15em",
               textTransform: "uppercase",
               background: "linear-gradient(135deg, oklch(0.52 0.18 15), oklch(0.45 0.16 12))",
               color: "oklch(0.97 0.01 90)",
-              padding: "0.85rem 2.2rem",
+              padding: "1.1rem 2.8rem",
               textDecoration: "none",
               display: "inline-block",
               transition: "all 0.3s ease",
+              fontWeight: 600,
             }}
           >
             Rezervo Tavolë
@@ -315,16 +317,17 @@ function HeroSection() {
             href="#menu"
             style={{
               fontFamily: "'Cinzel', serif",
-              fontSize: "0.7rem",
+              fontSize: "1rem",
               letterSpacing: "0.15em",
               textTransform: "uppercase",
               background: "transparent",
               color: "oklch(0.52 0.18 15)",
-              padding: "0.85rem 2.2rem",
+              padding: "1.1rem 2.8rem",
               textDecoration: "none",
               display: "inline-block",
               border: "2px solid oklch(0.52 0.18 15)",
               transition: "all 0.3s ease",
+              fontWeight: 600,
             }}
           >
             Shfletoni Menynë
