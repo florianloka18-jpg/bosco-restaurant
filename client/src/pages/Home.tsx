@@ -1190,7 +1190,7 @@ function ContactSection() {
           {/* Map embed */}
           <div className="relative overflow-hidden" style={{ minHeight: "400px" }}>
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.0!2d19.8187!3d41.3275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1350310c5b0a0001%3A0x0!2sBosco+Restaurant!5e0!3m2!1sen!2sal!4v1"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.2!2d19.804476!3d41.336968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135031c5d82102fd%3A0xb4cd935a3640a516!2sBosco%20Restaurant!5e0!3m2!1sen!2sal!4v1777309600000"
               width="100%"
               height="100%"
               style={{
@@ -1200,7 +1200,7 @@ function ContactSection() {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Bosco Restaurant Location"
+              title="Bosco Restaurant - Rruga Don Bosko, Tiranë"
             />
             <div className="absolute inset-0 pointer-events-none" style={{
               border: "2px solid oklch(0.52 0.18 15 / 25%)"
