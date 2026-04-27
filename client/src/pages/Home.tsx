@@ -14,12 +14,12 @@ const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663604991818/9MhZp
 const SEAFOOD_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663604991818/9MhZpn8FgaQZbnMXdEdVkE/bosco-seafood-Bxguc7rwKbhYsUADiZ34nr.webp";
 const SUSHI_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663604991818/9MhZpn8FgaQZbnMXdEdVkE/bosco-sushi-kVmkE9RhXYxQZW9FypXtNX.webp";
 const MEAT_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663604991818/9MhZpn8FgaQZbnMXdEdVkE/bosco-meat-XGLqrWvLzfzp9JNdPq7B9G.webp";
-const INTERIOR_1 = "/manus-storage/bosco-interior-1_057b4358.jpg";
-const FOOD_1 = "/manus-storage/bosco-food-1_6a694cac.jpg";
-const FOOD_2 = "/manus-storage/bosco-food-2_bce879ac.jpg";
-const INTERIOR_3 = "/manus-storage/bosco-interior-3_18cc393e.jpg";
-const FOOD_4 = "/manus-storage/bosco-food-4_118e5343.jpg";
-const FOOD_5 = "/manus-storage/bosco-food-5_3a6124ef.jpg";
+const INTERIOR_1 = "/manus-storage/bosco_interior_main_ef859947.webp";
+const FOOD_1 = "/manus-storage/bosco_sushi_platter_f81a205b.webp";
+const FOOD_2 = "/manus-storage/bosco_salad_dish_e2cb1370.webp";
+const INTERIOR_3 = "/manus-storage/bosco_interior_main_ef859947.webp";
+const FOOD_4 = "/manus-storage/bosco_sushi_platter_f81a205b.webp";
+const FOOD_5 = "/manus-storage/bosco_salad_dish_e2cb1370.webp";
 
 // ─── Scroll Animation Hook ─────────────────────────────────────────────────────
 function useInView(threshold = 0.15) {
