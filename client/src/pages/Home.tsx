@@ -488,21 +488,39 @@ const menuCategories = [
     label: "Nga Deti",
     description: "Peshku më i freskët, i përpunuar me mjeshtëri mesdhetare. Përzgjedhja jonë e peshkut gëzon bollëkun e Adriatikut dhe përtej.",
     image: SEAFOOD_IMG,
-    items: ["Branzin i Pjekur", "Kalamarit Carpaccio", "Risoto me Karkaleca", "Tartare Salmoni", "Linguine me Fruta Deti"],
+    items: [
+      { name: "Nigiri Salmoni", price: "850 Lekë", description: "Salmoni premium i freskët mbi oriz të pjekur me përsosje, i ngjyrë me wasabi dhe xhenxhef të turshuar", image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663604991818/9MhZpn8FgaQZbnMXdEdVkE/bosco_salmon_nigiri-SinUrDybUAnkMuCRzhmeES.webp" },
+      { name: "Branzin i Pjekur", price: "1200 Lekë", description: "Branzin i tërë i pjekur në furrë me limon, zëlinë dhe vaj ulliri të cilësisë së lartë, shërbyer me perime të pjekura", image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663604991818/9MhZpn8FgaQZbnMXdEdVkE/bosco_grilled_fish-7qucHowpex6Hg3Jr5S3YBz.webp" },
+      { name: "Risoto me Karkaleca", price: "1350 Lekë", description: "Risoto i kremuar me safran dhe karkaleca të freskëta, përfunduar me parmezane dhe vaj truffle të zi", image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663604991818/9MhZpn8FgaQZbnMXdEdVkE/bosco_risotto_seafood-Nk3siJLfvj75dSte82ET7W.webp" },
+      { name: "Tartare Salmoni", price: "950 Lekë", description: "Salmoni i prerë dore me vaj ulliri të mirë, kaperi, sipë dhe limon, shërbyer me brusketa të nxehtë", image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663604991818/9MhZpn8FgaQZbnMXdEdVkE/bosco_salmon_nigiri-SinUrDybUAnkMuCRzhmeES.webp" },
+      { name: "Linguine me Fruta Deti", price: "1100 Lekë", description: "Linguine artizanale me kalamarit, karkaleca, moluska dhe sallcë domatesh të freskëta", image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663604991818/9MhZpn8FgaQZbnMXdEdVkE/bosco_risotto_seafood-Nk3siJLfvj75dSte82ET7W.webp" },
+    ],
   },
   {
     id: "earth",
     label: "Nga Toka",
     description: "Prerjet e para dhe përgatitjet artizanale që nderojnë mishin më të mirë. Çdo pjatë është dëshmi e përkushtimit tonë ndaj cilësisë.",
     image: MEAT_IMG,
-    items: ["Tenderloin Viçi", "Costoleta Qingjali", "Vici Milanese", "Pula e Pjekur", "Grile i Përzier"],
+    items: [
+      { name: "Tenderloin Viçi", price: "1500 Lekë", description: "Tenderloin viçi 250g i pjekur në temperaturë të ulët, shërbyer me salcë demi-glace dhe perime të pjekura", image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663604991818/9MhZpn8FgaQZbnMXdEdVkE/bosco_beef_steak-eMuN82xxzWHHdfFuaSrJoc.webp" },
+      { name: "Costoleta Qingjali", price: "1350 Lekë", description: "Costoleta qingjali e pjekur në furrë me erëza të egra dhe salcë me boronica, shërbyer me patate të pjekura", image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663604991818/9MhZpn8FgaQZbnMXdEdVkE/bosco_beef_steak-eMuN82xxzWHHdfFuaSrJoc.webp" },
+      { name: "Vici Milanese", price: "1050 Lekë", description: "Vici i rrahur hollë, i mbuluar me miell, vezë dhe brumë panko, pjekur derisa të bëhet i artë dhe i brishtë", image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663604991818/9MhZpn8FgaQZbnMXdEdVkE/bosco_beef_steak-eMuN82xxzWHHdfFuaSrJoc.webp" },
+      { name: "Pula e Pjekur", price: "950 Lekë", description: "Pula e tërë e pjekur në furrë me erëza të freskëta, shërbyer me salcë me krem dhe perime sezonale", image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663604991818/9MhZpn8FgaQZbnMXdEdVkE/bosco_beef_steak-eMuN82xxzWHHdfFuaSrJoc.webp" },
+      { name: "Grile i Përzier", price: "1400 Lekë", description: "Përzgjedhja jonë e mishit të grilluar: viç, qingjal dhe pula, shërbyer me salsa të ndryshme", image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663604991818/9MhZpn8FgaQZbnMXdEdVkE/bosco_beef_steak-eMuN82xxzWHHdfFuaSrJoc.webp" },
+    ],
   },
   {
     id: "sushi",
     label: "Sushi & Specialitete",
     description: "Përzgjedhja jonë e sushi sjell precizionin japonez në tryezën shqiptare. E freskët, elegante dhe e përpunuar me përbërësit më të mirë.",
     image: SUSHI_IMG,
-    items: ["Nigiri Salmoni", "Maki Tunë", "Dragon Roll", "Rrotull Karkalecash", "Pjatë Sashimi"],
+    items: [
+      { name: "Nigiri Salmoni", price: "850 Lekë", description: "Salmoni premium i freskët mbi oriz të pjekur me përsosje, i ngjyrë me wasabi dhe xhenxhef të turshuar", image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663604991818/9MhZpn8FgaQZbnMXdEdVkE/bosco_salmon_nigiri-SinUrDybUAnkMuCRzhmeES.webp" },
+      { name: "Maki Tunë", price: "750 Lekë", description: "Rrotulla sushi me tunë të freskët, avokado dhe kastravec, mbuluar me alga nori dhe fara sezami", image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663604991818/9MhZpn8FgaQZbnMXdEdVkE/bosco_tuna_maki-WMqB6qnvV3cqgHhtxMc4PV.webp" },
+      { name: "Dragon Roll", price: "1100 Lekë", description: "Rrotulla premium me tunë, salmoni, avokado dhe krevete të pjekura, dekoruar me avokado të hollë", image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663604991818/9MhZpn8FgaQZbnMXdEdVkE/bosco_tuna_maki-WMqB6qnvV3cqgHhtxMc4PV.webp" },
+      { name: "Rrotull Karkalecash", price: "950 Lekë", description: "Rrotulla me karkaleca të freskëta, avokado, kastravec dhe salcë sriracha, mbuluar me fara sezami", image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663604991818/9MhZpn8FgaQZbnMXdEdVkE/bosco_tuna_maki-WMqB6qnvV3cqgHhtxMc4PV.webp" },
+      { name: "Pjatë Sashimi", price: "1250 Lekë", description: "Përzgjedhja e peshkut më të mirë të prerë dore: salmoni, tunë, branzini dhe krevete, shërbyer me wasabi dhe soy", image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663604991818/9MhZpn8FgaQZbnMXdEdVkE/bosco_salmon_nigiri-SinUrDybUAnkMuCRzhmeES.webp" },
+    ],
   },
 ];
 
@@ -616,26 +634,49 @@ function MenuSection() {
 
               <BurgundyDivider className="mb-6" />
 
-              <ul className="space-y-3">
+              <div className="space-y-5">
                 {active.items.map((item, i) => (
-                  <li key={item} className="flex items-center justify-between py-2" style={{
+                  <div key={item.name} className="pb-5" style={{
                     borderBottom: i < active.items.length - 1 ? "1px solid oklch(0.52 0.18 15 / 12%)" : "none",
                   }}>
-                    <span style={{
-                      fontFamily: "'Playfair Display', serif",
-                      fontSize: "1rem",
-                      color: "oklch(0.35 0.08 40)",
-                    }}>{item}</span>
-                    <span style={{
-                      fontFamily: "'Cinzel', serif",
-                      fontSize: "0.6rem",
-                      letterSpacing: "0.1em",
-                      color: "oklch(0.52 0.18 15)",
-                      textTransform: "uppercase",
-                    }}>Sezonale</span>
-                  </li>
+                    <div className="flex items-start justify-between gap-4 mb-3">
+                      <div className="flex-1">
+                        <h4 style={{
+                          fontFamily: "'Playfair Display', serif",
+                          fontSize: "1.05rem",
+                          fontWeight: 500,
+                          color: "oklch(0.35 0.08 40)",
+                          marginBottom: "0.3rem",
+                        }}>{item.name}</h4>
+                        <p style={{
+                          fontFamily: "'Lato', sans-serif",
+                          fontSize: "0.85rem",
+                          lineHeight: 1.5,
+                          color: "oklch(0.35 0.08 40 / 80%)",
+                          marginBottom: "0.4rem",
+                        }}>{item.description}</p>
+                      </div>
+                      <span style={{
+                        fontFamily: "'Cinzel', serif",
+                        fontSize: "0.75rem",
+                        letterSpacing: "0.1em",
+                        color: "oklch(0.52 0.18 15)",
+                        textTransform: "uppercase",
+                        fontWeight: 600,
+                        whiteSpace: "nowrap",
+                      }}>{item.price}</span>
+                    </div>
+                    {item.image && (
+                      <img
+                        src={item.image}
+                        alt={item.name}
+                        className="w-full h-32 object-cover"
+                        style={{ borderRadius: "0.4rem" }}
+                      />
+                    )}
+                  </div>
                 ))}
-              </ul>
+              </div>
 
               <div className="mt-8">
                 <a
